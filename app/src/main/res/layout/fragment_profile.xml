@@ -61,7 +61,8 @@
             android:textSize="8sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="SmallSp" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/tv_name_profile"
@@ -105,7 +106,7 @@
             tools:ignore="ContentDescription" />
 
         <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/imageView5"
+            android:id="@+id/iv_payment"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="60dp"
@@ -116,26 +117,26 @@
             tools:ignore="ContentDescription" />
 
         <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/imageView6"
+            android:id="@+id/iv_balance"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="60dp"
             android:layout_marginTop="30dp"
             android:src="@drawable/credit_card"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView5"
+            app:layout_constraintTop_toBottomOf="@+id/iv_payment"
             tools:ignore="ContentDescription" />
 
 
         <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/img_trade_history"
+            android:id="@+id/iv_trade_history"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/credit_card"
             android:layout_marginStart="60dp"
             android:layout_marginTop="30dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView6"
+            app:layout_constraintTop_toBottomOf="@+id/iv_balance"
             tools:ignore="ContentDescription" />
 
         <androidx.appcompat.widget.AppCompatTextView
@@ -245,14 +246,14 @@
             tools:ignore="ContentDescription" />
 
         <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/img_restore"
+            android:id="@+id/iv_restore"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/restore"
             android:layout_marginStart="60dp"
             android:layout_marginTop="30dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/img_trade_history"
+            app:layout_constraintTop_toBottomOf="@+id/iv_trade_history"
             tools:ignore="ContentDescription" />
 
         <androidx.appcompat.widget.AppCompatTextView
@@ -268,25 +269,25 @@
             app:layout_constraintTop_toBottomOf="@+id/tv_trade_history" />
 
         <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/img_help"
+            android:id="@+id/iv_help"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/help"
             android:layout_marginStart="60dp"
             android:layout_marginTop="30dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/img_restore"
+            app:layout_constraintTop_toBottomOf="@+id/iv_restore"
             tools:ignore="ContentDescription" />
 
         <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/img_log_out"
+            android:id="@+id/iv_log_out"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/log_out"
             android:layout_marginStart="60dp"
             android:layout_marginTop="30dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/img_help"
+            app:layout_constraintTop_toBottomOf="@+id/iv_help"
             tools:ignore="ContentDescription" />
 
         <androidx.appcompat.widget.AppCompatTextView

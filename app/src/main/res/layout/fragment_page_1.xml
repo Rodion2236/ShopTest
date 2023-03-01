@@ -31,7 +31,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/imageView4"
+        android:id="@+id/photo_page1"
         android:layout_width="32dp"
         android:layout_height="32dp"
         android:layout_marginTop="51dp"
@@ -42,7 +42,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/textView3"
+        android:id="@+id/location"
         android:layout_width="42dp"
         android:layout_height="13dp"
         android:layout_marginTop="92dp"
@@ -59,11 +59,11 @@
         android:layout_marginTop="96dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.619"
-        app:layout_constraintStart_toEndOf="@+id/textView3"
+        app:layout_constraintStart_toEndOf="@+id/location"
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.appcompat.widget.AppCompatEditText
-        android:id="@+id/idSV"
+        android:id="@+id/search_page_1"
         android:layout_width="262dp"
         android:layout_height="24dp"
         android:layout_marginTop="120dp"
@@ -77,14 +77,14 @@
         tools:ignore="SmallSp" />
 
     <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/imageView7"
+        android:id="@+id/search_icon"
         android:layout_width="8dp"
         android:layout_height="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:src="@drawable/search"
-        app:layout_constraintBottom_toBottomOf="@+id/idSV"
-        app:layout_constraintEnd_toEndOf="@+id/idSV" />
+        app:layout_constraintBottom_toBottomOf="@+id/search_page_1"
+        app:layout_constraintEnd_toEndOf="@+id/search_page_1" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

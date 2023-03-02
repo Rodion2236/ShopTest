@@ -86,5 +86,15 @@
         app:layout_constraintBottom_toBottomOf="@+id/search_page_1"
         app:layout_constraintEnd_toEndOf="@+id/search_page_1" />
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_icons"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/search_page_1"
+        android:layout_marginTop="15dp"
+        tools:listitem="@layout/list_icon" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

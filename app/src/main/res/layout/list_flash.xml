@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginStart="11dp">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_sneakers"
+        android:layout_width="174dp"
+        android:layout_height="221dp"
+        android:src="@drawable/shose" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_fab"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_below="@id/iv_sneakers"
+        android:layout_marginStart="135dp"
+        android:layout_marginTop="-40dp"
+        android:src="@drawable/fab" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_like"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_below="@id/iv_sneakers"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="-37dp"
+        android:src="@drawable/like" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_category"
+        android:layout_width="35dp"
+        android:layout_height="12dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="121dp"
+        android:background="@drawable/shape_form"
+        android:gravity="center"
+        android:text="@string/kids"
+        android:textColor="@color/black"
+        android:textSize="6sp"
+        android:textStyle="bold"
+        tools:ignore="SmallSp" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_sneakers"
+        android:layout_width="87dp"
+        android:layout_height="36dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="144dp"
+        android:text="@string/new_balance_sneakers"
+        android:textColor="@color/white"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        tools:ignore="SmallSp" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_cost"
+        android:layout_width="43dp"
+        android:layout_height="12dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="192dp"
+        android:text="@string/money_flash"
+        android:textColor="@color/white"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        tools:ignore="SmallSp" />
+</RelativeLayout>

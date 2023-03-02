@@ -1,7 +1,8 @@
-package com.rodion2236.shopmobiletask
+package com.rodion2236.shopmobiletask.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.rodion2236.shopmobiletask.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

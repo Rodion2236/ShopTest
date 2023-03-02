@@ -1,12 +1,13 @@
-package com.rodion2236.shopmobiletask
+package com.rodion2236.shopmobiletask.ui
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.rodion2236.shopmobiletask.R
 
-class Page_2Fragment : Fragment() {
+class Page2Fragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

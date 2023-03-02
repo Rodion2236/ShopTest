@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Page_1Fragment">
+    tools:context=".ui.Page1Fragment">
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/image_grid"

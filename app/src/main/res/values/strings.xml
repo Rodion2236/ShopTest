@@ -33,4 +33,10 @@
     <string name="location">Location</string>
     <string name="what_are_you_looking_for">What are you looking for ?</string>
     <string name="phones">Phones</string>
+    <string name="console">Console</string>
+    <string name="Games">Games</string>
+    <string name="_90000">$ 90000</string>
+    <string name="playstation_5_console">PlayStation 5 console</string>
+    <string name="latest">Latest</string>
+    <string name="view_all">View all</string>
 </resources>

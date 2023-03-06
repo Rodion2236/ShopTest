@@ -7,7 +7,6 @@ import com.rodion2236.shopmobiletask.model.User
 class UserRepository(
     private val userDao: UserDao
     ) {
-
     val readData: LiveData<List<User>> = userDao.readData()
 
     suspend fun addUserToDatabase(user: User) {

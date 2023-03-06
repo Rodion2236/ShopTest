@@ -9,7 +9,7 @@ import com.rodion2236.shopmobiletask.model.User
 import com.rodion2236.shopmobiletask.repository.UserRepository
 import kotlinx.coroutines.launch
 
-class ViewModel(application: Application): AndroidViewModel(application) {
+class SignViewModel(application: Application): AndroidViewModel(application) {
 
     private val readData: LiveData<List<User>>
     private val reipository: UserRepository
@@ -31,10 +31,5 @@ class ViewModel(application: Application): AndroidViewModel(application) {
     fun getEmailAndFirstName(email: String, firstName: String): LiveData<User> {
         return reipository
             .getEmailAndFirstName(email, firstName)
-    }
-
-    fun authentication(firstName: String): LiveData<User> {
-        return reipository
-            .authentication(firstName)
     }
 }

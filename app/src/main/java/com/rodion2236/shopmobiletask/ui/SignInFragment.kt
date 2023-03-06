@@ -14,12 +14,12 @@ import androidx.navigation.fragment.findNavController
 import com.rodion2236.shopmobiletask.R
 import com.rodion2236.shopmobiletask.databinding.FragmentSignInBinding
 import com.rodion2236.shopmobiletask.model.User
-import com.rodion2236.shopmobiletask.viewmodel.ViewModel
+import com.rodion2236.shopmobiletask.viewmodel.SignViewModel
 
 class SignInFragment : Fragment() {
 
     private lateinit var fragmentSignInBinding: FragmentSignInBinding
-    private lateinit var viewModel: ViewModel
+    private lateinit var viewModel: SignViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -37,7 +37,7 @@ class SignInFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         fragmentSignInBinding.button.setOnClickListener {
             addData()
-            cleanText()
+            cleanFieds()
         }
     }
 
@@ -52,7 +52,7 @@ class SignInFragment : Fragment() {
         return !TextUtils.isEmpty(email) && Patterns.EMAIL_ADDRESS.matcher(email).matches()
     }
 
-    private fun cleanText(){
+    private fun cleanFieds(){
         fragmentSignInBinding.signInFirstName.text?.clear()
         fragmentSignInBinding.signInLastName.text?.clear()
         fragmentSignInBinding.signInEmail.text?.clear()

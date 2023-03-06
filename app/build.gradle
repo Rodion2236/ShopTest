@@ -50,9 +50,6 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
 
-    //fragment
-    implementation 'androidx.navigation:navigation-fragment-ktx:2.5.3'
-
     //navigation
     implementation 'androidx.navigation:navigation-ui-ktx:2.5.3'
     implementation 'androidx.navigation:navigation-fragment-ktx:2.5.3'
@@ -83,6 +80,4 @@ dependencies {
     implementation "androidx.lifecycle:lifecycle-livedata-ktx:2.5.1"
     implementation "androidx.lifecycle:lifecycle-runtime-ktx:2.5.1"
     implementation "androidx.lifecycle:lifecycle-extensions:2.2.0"
-
-
 }

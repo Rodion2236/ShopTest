@@ -2,7 +2,7 @@ package com.rodion2236.shopmobiletask.model
 
 import com.rodion2236.shopmobiletask.R
 
-enum class Icons(val icons: Int) {
+enum class Icons(val iconsId: Int) {
     //телефон/наушники/игры/авто/фурнитура/дети
 
     Phones(R.drawable.phone),

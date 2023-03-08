@@ -42,5 +42,11 @@ class LatestAdapter(): RecyclerView.Adapter<LatestAdapter.ViewHolder>() {
     override fun onBindViewHolder(holder: LatestAdapter.ViewHolder, position: Int) {
         holder.bind(listLatest[position])
     }
+
+    fun updateLatest(latest: List<InfoLatest>) {
+        listLatest.clear()
+        listLatest.addAll(latest)
+        notifyDataSetChanged()
+    }
 }
 //займусь ими чуть позже, сначала надо реализовать фрагменты

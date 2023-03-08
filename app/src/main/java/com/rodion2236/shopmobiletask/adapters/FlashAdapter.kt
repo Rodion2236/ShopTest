@@ -2,6 +2,7 @@ package com.rodion2236.shopmobiletask.adapters
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.rodion2236.shopmobiletask.databinding.ListFlashBinding
@@ -41,6 +42,35 @@ class FlashAdapter(): RecyclerView.Adapter<FlashAdapter.ViewHolder>() {
 
     override fun getItemCount(): Int {
         return listFlash.size
+    }
+
+    private class Comparator(
+        private val oldList: List<InfoFlash>,
+        private val newList: List<InfoFlash>
+        ) : DiffUtil.Callback() {
+        override fun getOldListSize(): Int {
+            return oldList.size
+        }
+
+        override fun getNewListSize(): Int {
+            return newList.size
+        }
+
+        override fun areItemsTheSame(oldItemPosition: Int, newItemPosition: Int): Boolean {
+            return oldList[oldItemPosition] == newList[newItemPosition]
+        }
+
+        override fun areContentsTheSame(oldItemPosition: Int, newItemPosition: Int): Boolean {
+            return oldList[oldItemPosition] == newList[newItemPosition]
+        }
+    }
+
+    fun submitList(newList: List<InfoFlash>) {
+        val diffResult = DiffUtil.calculateDiff(
+            Comparator(listFlash, newList)
+        )
+        listFlash = newList
+        diffResult.dispatchUpdatesTo(this)
     }
 }
 //займусь ими чуть позже, сначала надо реализовать фрагменты

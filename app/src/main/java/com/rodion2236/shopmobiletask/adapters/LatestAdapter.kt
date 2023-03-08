@@ -5,10 +5,16 @@ import androidx.recyclerview.widget.RecyclerView
 import com.rodion2236.shopmobiletask.model.latest.InfoLatest
 import com.rodion2236.shopmobiletask.model.latest.Latest
 
-class LatestAdapter(private var latest: List<InfoLatest>): RecyclerView.Adapter<LatestAdapter>() {
+class LatestAdapter(
+    private var latest: List<InfoLatest>
+    ): RecyclerView.Adapter<LatestAdapter.ViewHolder>() {
+
+    class ViewHolder {
+
+    }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): LatestAdapter {
-        TODO("Not yet implemented")
+        val binding = Late
     }
 
     override fun getItemCount(): Int {
@@ -16,7 +22,7 @@ class LatestAdapter(private var latest: List<InfoLatest>): RecyclerView.Adapter<
     }
 
     override fun onBindViewHolder(holder: LatestAdapter, position: Int) {
-        TODO("Not yet implemented")
+        holder.bind(latest[position])
     }
 }
 

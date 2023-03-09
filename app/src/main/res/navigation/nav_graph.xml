@@ -40,9 +40,9 @@
 
     <fragment
         android:id="@+id/page_1_fragment"
-        android:name="com.rodion2236.shopmobiletask.ui.Page1Fragment"
+        android:name="com.rodion2236.shopmobiletask.ui.ShopFragment"
         android:label="fragment_page_1"
-        tools:layout="@layout/fragment_page_1">
+        tools:layout="@layout/fragment_shop">
 
         <action
             android:id="@+id/action_page_1_to_page_2"
@@ -51,8 +51,8 @@
 
     <fragment
         android:id="@+id/page_2_fragment"
-        android:name="com.rodion2236.shopmobiletask.ui.Page2Fragment"
+        android:name="com.rodion2236.shopmobiletask.ui.ProductFragment"
         android:label="fragment_page_2"
-        tools:layout="@layout/fragment_page_2">
+        tools:layout="@layout/fragment_product">
     </fragment>
 </navigation>

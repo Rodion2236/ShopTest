@@ -21,7 +21,8 @@ class LoginFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        fragmentLoginBinding = FragmentLoginBinding.inflate(inflater, container, false)
+        fragmentLoginBinding = FragmentLoginBinding
+            .inflate(inflater, container, false)
         return fragmentLoginBinding.root
     }
 
@@ -32,11 +33,6 @@ class LoginFragment : Fragment() {
         }
     }
 
-    override fun onDestroy() {
-        Log.d("login_fragment", "onDestroy")
-        super.onDestroy()
-    }
-
     private fun authentication() {
         val firstName = fragmentLoginBinding.loginFirstName.text.toString()
         viewModel.authentication(firstName = firstName).observe(viewLifecycleOwner) { realUser ->
@@ -45,6 +41,17 @@ class LoginFragment : Fragment() {
             } else {
                 Toast.makeText(requireContext(), "Такого пользователя не существует", Toast.LENGTH_LONG).show()
             }
+        }
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+
+        activity?.run {
+            supportFragmentManager
+                .beginTransaction()
+                .remove(this@LoginFragment)
+                .commitAllowingStateLoss()
         }
     }
 }

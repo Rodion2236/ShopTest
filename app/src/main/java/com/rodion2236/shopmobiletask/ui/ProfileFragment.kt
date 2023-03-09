@@ -17,7 +17,8 @@ class ProfileFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        fragmentProfileBinding = FragmentProfileBinding.inflate(inflater, container, false)
+        fragmentProfileBinding = FragmentProfileBinding
+            .inflate(inflater, container, false)
         logOut()
         fragmentProfileBinding.tvTradeStore.setOnClickListener {
             findNavController().navigate(R.id.page_1_fragment)
@@ -28,6 +29,17 @@ class ProfileFragment : Fragment() {
     private fun logOut(){
         fragmentProfileBinding.ivLogOut.setOnClickListener {
             findNavController().navigate(R.id.sign_in_fragment)
+        }
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+
+        activity?.run {
+            supportFragmentManager
+                .beginTransaction()
+                .remove(this@ProfileFragment)
+                .commitAllowingStateLoss()
         }
     }
 }

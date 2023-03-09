@@ -25,7 +25,8 @@ class SignInFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        fragmentSignInBinding = FragmentSignInBinding.inflate(inflater, container, false)
+        fragmentSignInBinding = FragmentSignInBinding
+            .inflate(inflater, container, false)
 
         fragmentSignInBinding.signInLogin.setOnClickListener{
             findNavController().navigate(R.id.login_fragment)
@@ -39,11 +40,6 @@ class SignInFragment : Fragment() {
             addData()
             cleanFieds()
         }
-    }
-
-    override fun onDestroy() {
-        Log.d("sign_in_fragment", "onDestroy")
-        super.onDestroy()
     }
 
     //проверить валидность емайл, чистка после добавки, добавление в базу, проверка всех полей на пустоту
@@ -103,5 +99,16 @@ class SignInFragment : Fragment() {
             Toast.makeText(requireContext(), "Поля заполнены неправильно", Toast.LENGTH_LONG).show()
         }
         checkUser()
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+
+        activity?.run {
+            supportFragmentManager
+                .beginTransaction()
+                .remove(this@SignInFragment)
+                .commitAllowingStateLoss()
+        }
     }
 }

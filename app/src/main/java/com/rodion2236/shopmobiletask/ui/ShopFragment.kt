@@ -50,13 +50,13 @@ class ShopFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         shopViewModel.observeLatest().observe(viewLifecycleOwner) { latest ->
-            latest.let {
+            latest?.let {
                 latestAdapter.updateLatest(it)
             }
         }
 
         shopViewModel.observeFlash().observe(viewLifecycleOwner) { flash ->
-            flash.let {
+            flash?.let {
                 flashAdapter.submitList(it)
             }
         }

@@ -2,9 +2,11 @@ package com.rodion2236.shopmobiletask.adapters
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.rodion2236.shopmobiletask.databinding.ListLatestBinding
+import com.rodion2236.shopmobiletask.model.flash.InfoFlash
 import com.rodion2236.shopmobiletask.model.latest.InfoLatest
 import com.rodion2236.shopmobiletask.model.latest.Latest
 
@@ -26,7 +28,7 @@ class LatestAdapter(): RecyclerView.Adapter<LatestAdapter.ViewHolder>() {
         }
     }
 
-    private var listLatest = mutableListOf<InfoLatest>()
+    private var listLatest = listOf<InfoLatest>()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): LatestAdapter.ViewHolder {
         val binding = ListLatestBinding
@@ -43,10 +45,33 @@ class LatestAdapter(): RecyclerView.Adapter<LatestAdapter.ViewHolder>() {
         holder.bind(listLatest[position])
     }
 
-    fun updateLatest(latest: List<InfoLatest>) {
-        listLatest.clear()
-        listLatest.addAll(latest)
-        notifyDataSetChanged()
+    private class Comparator(
+        private val oldList: List<InfoLatest>,
+        private val newList: List<InfoLatest>
+    ) : DiffUtil.Callback() {
+        override fun getOldListSize(): Int {
+            return oldList.size
+        }
+
+        override fun getNewListSize(): Int {
+            return newList.size
+        }
+
+        override fun areItemsTheSame(oldItemPosition: Int, newItemPosition: Int): Boolean {
+            return oldList[oldItemPosition] == newList[newItemPosition]
+        }
+
+        override fun areContentsTheSame(oldItemPosition: Int, newItemPosition: Int): Boolean {
+            return oldList[oldItemPosition] == newList[newItemPosition]
+        }
+    }
+
+    fun updateLatest(newList: List<InfoLatest>) {
+        val diffResult = DiffUtil.calculateDiff(
+            Comparator(listLatest, newList)
+        )
+        listLatest = newList
+        diffResult.dispatchUpdatesTo(this)
     }
 }
 //займусь ими чуть позже, сначала надо реализовать фрагменты

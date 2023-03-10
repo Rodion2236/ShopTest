@@ -14,15 +14,12 @@ class ProfileFragment : Fragment() {
     private lateinit var fragmentProfileBinding: FragmentProfileBinding
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
+        inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View {
         fragmentProfileBinding = FragmentProfileBinding
             .inflate(inflater, container, false)
+        goShop()
         logOut()
-        fragmentProfileBinding.tvTradeStore.setOnClickListener {
-            findNavController().navigate(R.id.page_1_fragment)
-        }
         return fragmentProfileBinding.root
     }
 
@@ -30,7 +27,20 @@ class ProfileFragment : Fragment() {
         fragmentProfileBinding.ivLogOut.setOnClickListener {
             findNavController().navigate(R.id.sign_in_fragment)
         }
+        fragmentProfileBinding.tvLogOut.setOnClickListener {
+            findNavController().navigate(R.id.sign_in_fragment)
+        }
     }
+
+    private fun goShop() {
+        fragmentProfileBinding.tvTradeStore.setOnClickListener {
+            findNavController().navigate(R.id.page_1_fragment)
+        }
+        fragmentProfileBinding.ivTradeStore.setOnClickListener {
+            findNavController().navigate(R.id.page_1_fragment)
+        }
+    }
+    // может все это в одну кнопку сжать?
 
     override fun onDestroy() {
         super.onDestroy()

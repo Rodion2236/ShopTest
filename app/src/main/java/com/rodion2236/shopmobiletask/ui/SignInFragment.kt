@@ -2,7 +2,6 @@ package com.rodion2236.shopmobiletask.ui
 
 import android.os.Bundle
 import android.text.TextUtils
-import android.util.Log
 import android.util.Patterns
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -10,6 +9,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.rodion2236.shopmobiletask.R
 import com.rodion2236.shopmobiletask.databinding.FragmentSignInBinding
@@ -28,6 +28,8 @@ class SignInFragment : Fragment() {
         fragmentSignInBinding = FragmentSignInBinding
             .inflate(inflater, container, false)
 
+        viewModel = ViewModelProvider(this)[SignViewModel::class.java]
+
         fragmentSignInBinding.signInLogin.setOnClickListener{
             findNavController().navigate(R.id.login_fragment)
         }
@@ -38,7 +40,7 @@ class SignInFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         fragmentSignInBinding.button.setOnClickListener {
             addData()
-            cleanFieds()
+            cleanFields()
         }
     }
 
@@ -48,7 +50,7 @@ class SignInFragment : Fragment() {
         return !TextUtils.isEmpty(email) && Patterns.EMAIL_ADDRESS.matcher(email).matches()
     }
 
-    private fun cleanFieds(){
+    private fun cleanFields(){
         fragmentSignInBinding.signInFirstName.text?.clear()
         fragmentSignInBinding.signInLastName.text?.clear()
         fragmentSignInBinding.signInEmail.text?.clear()
@@ -78,14 +80,9 @@ class SignInFragment : Fragment() {
 
             val user = User(0, firstName, lastName, email)
 
-            viewModel.getEmailAndFirstName(email, firstName).observe(viewLifecycleOwner) { newUser ->
+            viewModel.getEmailAndFirstName(email,firstName).observe(viewLifecycleOwner) { newUser ->
                 if (newUser == null) {
                     viewModel.addUserToDatabase(user)
-                    Toast.makeText(
-                        requireContext(),
-                        "Регистрация прошла успешно!",
-                        Toast.LENGTH_LONG
-                    ).show()
                     findNavController().navigate(R.id.profile_fragment)
                 } else {
                     Toast.makeText(

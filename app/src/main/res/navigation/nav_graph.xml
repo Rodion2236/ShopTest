@@ -22,6 +22,10 @@
         android:label="fragment_login"
         tools:layout="@layout/fragment_login">
 
+        <argument
+            android:name="name"
+            app:argType="string" />
+
         <action
             android:id="@+id/action_login_to_profile"
             app:destination="@id/profile_fragment"/>
@@ -32,6 +36,10 @@
         android:name="com.rodion2236.shopmobiletask.ui.ProfileFragment"
         android:label="fragment_profile"
         tools:layout="@layout/fragment_profile">
+
+        <argument
+            android:name="name"
+            app:argType="string" />
 
         <action
             android:id="@+id/action_profile_to_page_1"

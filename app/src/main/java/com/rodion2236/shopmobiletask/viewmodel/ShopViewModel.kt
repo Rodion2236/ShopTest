@@ -25,8 +25,8 @@ class ShopViewModel: ViewModel() {
 
     init {
         viewModelScope.launch {
-            flashLiveData()
             latestLiveData()
+            flashLiveData()
         }
     }
 

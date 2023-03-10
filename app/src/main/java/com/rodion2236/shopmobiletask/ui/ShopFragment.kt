@@ -48,6 +48,7 @@ class ShopFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
         shopViewModel.observeLatest().observe(viewLifecycleOwner) { latest ->
             latest.let {
                 latestAdapter.updateLatest(it)

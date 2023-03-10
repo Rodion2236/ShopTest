@@ -86,7 +86,7 @@
             android:id="@+id/iv_trade_store"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="60dp"
+            android:layout_marginStart="85dp"
             android:layout_marginTop="308dp"
             android:src="@drawable/credit_card"
             app:layout_constraintStart_toStartOf="parent"
@@ -97,7 +97,7 @@
             android:id="@+id/iv_payment"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="60dp"
+            android:layout_marginStart="85dp"
             android:layout_marginTop="30dp"
             android:src="@drawable/credit_card"
             app:layout_constraintStart_toStartOf="parent"
@@ -108,7 +108,7 @@
             android:id="@+id/iv_balance"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="60dp"
+            android:layout_marginStart="85dp"
             android:layout_marginTop="30dp"
             android:src="@drawable/credit_card"
             app:layout_constraintStart_toStartOf="parent"
@@ -120,7 +120,7 @@
             android:id="@+id/iv_trade_history"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="60dp"
+            android:layout_marginStart="85dp"
             android:layout_marginTop="30dp"
             android:src="@drawable/credit_card"
             app:layout_constraintStart_toStartOf="parent"
@@ -169,11 +169,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="168dp"
-            android:layout_marginTop="36dp"
             android:text="@string/money"
             android:textSize="14sp"
             app:layout_constraintStart_toEndOf="@+id/tv_balance"
-            app:layout_constraintTop_toBottomOf="@+id/img_arrow_payment" />
+            app:layout_constraintTop_toTopOf="@+id/tv_balance" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/tv_trade_history"
@@ -187,16 +186,15 @@
             app:layout_constraintStart_toEndOf="@+id/iv_trade_history"
             app:layout_constraintTop_toTopOf="@+id/iv_trade_history" />
 
-        <ImageView
+        <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/img_arrow_restore"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="127dp"
             android:src="@drawable/arrow_right"
-            app:layout_constraintBottom_toBottomOf="@+id/tv_restore"
+            android:layout_marginTop="38dp"
+            android:layout_marginStart="135dp"
             app:layout_constraintStart_toEndOf="@+id/tv_restore"
-            app:layout_constraintTop_toTopOf="@+id/tv_restore"
-            tools:ignore="ContentDescription" />
+            app:layout_constraintTop_toBottomOf="@+id/img_arrow_trade_history" />
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/img_arrow_trade"
@@ -206,36 +204,34 @@
             android:src="@drawable/arrow_right"
             app:layout_constraintBottom_toBottomOf="@+id/tv_trade_store"
             app:layout_constraintStart_toEndOf="@+id/tv_trade_store"
-            app:layout_constraintTop_toTopOf="@+id/tv_trade_store"
-            tools:ignore="ContentDescription" />
+            app:layout_constraintTop_toTopOf="@+id/tv_trade_store" />
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/img_arrow_trade_history"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="38dp"
+            android:layout_marginStart="160dp"
             android:src="@drawable/arrow_right"
-            android:layout_marginTop="30dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_balance_result"
-            tools:ignore="ContentDescription" />
+            app:layout_constraintStart_toEndOf="@+id/tv_trade_history"
+            app:layout_constraintTop_toBottomOf="@+id/tv_balance_result" />
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/img_arrow_payment"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
-            android:layout_marginStart="130dp"
+            android:layout_marginStart="138dp"
             android:src="@drawable/arrow_right"
             app:layout_constraintBottom_toBottomOf="@+id/tv_payment"
             app:layout_constraintStart_toEndOf="@+id/tv_payment"
-            app:layout_constraintTop_toBottomOf="@+id/img_arrow_trade"
-            tools:ignore="ContentDescription" />
+            app:layout_constraintTop_toBottomOf="@+id/img_arrow_trade" />
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/iv_restore"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="60dp"
+            android:layout_marginStart="85dp"
             android:layout_marginTop="30dp"
             android:src="@drawable/restore"
             app:layout_constraintStart_toStartOf="parent"
@@ -258,7 +254,7 @@
             android:id="@+id/iv_help"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="60dp"
+            android:layout_marginStart="85dp"
             android:layout_marginTop="30dp"
             android:src="@drawable/help"
             app:layout_constraintStart_toStartOf="parent"
@@ -269,7 +265,7 @@
             android:id="@+id/iv_log_out"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="60dp"
+            android:layout_marginStart="85dp"
             android:layout_marginTop="30dp"
             android:src="@drawable/log_out"
             app:layout_constraintStart_toStartOf="parent"

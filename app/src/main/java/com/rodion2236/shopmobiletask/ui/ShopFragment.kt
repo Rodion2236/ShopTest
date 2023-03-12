@@ -27,6 +27,7 @@ class ShopFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         iconsAdapter = IconsAdapter(Icons.values().toList())
         flashAdapter = FlashAdapter()
         latestAdapter = LatestAdapter()
@@ -70,7 +71,8 @@ class ShopFragment : Fragment() {
         )
     }
 
-    private fun onAttachRecyclerViewLatest() = shopBinding.recyclerLatest.apply {
+    private fun onAttachRecyclerViewLatest() = shopBinding.recyclerLatest
+        .apply {
         latestAdapter = LatestAdapter()
         adapter = latestAdapter
         layoutManager = LinearLayoutManager(
@@ -78,7 +80,8 @@ class ShopFragment : Fragment() {
         )
     }
 
-    private fun onAttachRecyclerViewFlash() = shopBinding.recyclerFlash.apply {
+    private fun onAttachRecyclerViewFlash() = shopBinding.recyclerFlash
+        .apply {
         flashAdapter = FlashAdapter()
         adapter = flashAdapter
         layoutManager = LinearLayoutManager(

@@ -19,8 +19,8 @@ class ShopViewModel: ViewModel() {
     private var _latest = MutableLiveData<List<InfoLatest>>()
     private var _flash = MutableLiveData<List<InfoFlash>>()
 
-    private val latest: LiveData<List<InfoLatest>> get() = _latest
-    private val flash: LiveData<List<InfoFlash>> get() = _flash
+    private val latest: LiveData<List<InfoLatest>> = _latest
+    private val flash: LiveData<List<InfoFlash>> = _flash
 
 
     init {

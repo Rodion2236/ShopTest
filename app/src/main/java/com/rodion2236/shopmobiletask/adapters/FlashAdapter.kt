@@ -30,10 +30,10 @@ class FlashAdapter(): RecyclerView.Adapter<FlashAdapter.ViewHolder>() {
     private var listFlash = listOf<InfoFlash>()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FlashAdapter.ViewHolder {
-        val binding = ListFlashBinding
+        val flashBinding = ListFlashBinding
             .inflate(LayoutInflater
                 .from(parent.context), parent, false)
-        return ViewHolder(binding)
+        return ViewHolder(flashBinding)
     }
 
     override fun onBindViewHolder(holder: FlashAdapter.ViewHolder, position: Int) {

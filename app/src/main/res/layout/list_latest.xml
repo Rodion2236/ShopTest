@@ -9,9 +9,11 @@
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/iv_console"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/console"
+        android:layout_width="114dp"
+        android:layout_height="149dp"
+        tools:src="@tools:sample/avatars"
+        android:layout_gravity="center"
+        android:scaleType="centerCrop"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

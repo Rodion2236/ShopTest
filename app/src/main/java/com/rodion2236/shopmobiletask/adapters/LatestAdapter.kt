@@ -6,9 +6,7 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.rodion2236.shopmobiletask.databinding.ListLatestBinding
-import com.rodion2236.shopmobiletask.model.flash.InfoFlash
 import com.rodion2236.shopmobiletask.model.latest.InfoLatest
-import com.rodion2236.shopmobiletask.model.latest.Latest
 
 class LatestAdapter(): RecyclerView.Adapter<LatestAdapter.ViewHolder>() {
 
@@ -30,18 +28,18 @@ class LatestAdapter(): RecyclerView.Adapter<LatestAdapter.ViewHolder>() {
 
     private var listLatest = listOf<InfoLatest>()
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): LatestAdapter.ViewHolder {
-        val binding = ListLatestBinding
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
+        val latestBinding = ListLatestBinding
             .inflate(LayoutInflater
             .from(parent.context), parent, false)
-        return ViewHolder(binding)
+        return ViewHolder(latestBinding)
     }
 
     override fun getItemCount(): Int {
         return listLatest.size
     }
 
-    override fun onBindViewHolder(holder: LatestAdapter.ViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.bind(listLatest[position])
     }
 
